@@ -20,14 +20,18 @@
 function testFunction(){
     var firstIndex, secondIndex, mainIndex;
     var text = "";
-
-for()
-
-    for(firstIndex = 0; firstIndex < 10; firstIndex++){
-        for(secondIndex = 0; secondIndex < firstIndex ; secondIndex++){
-            text += "*";
+    text += "<table>";
+    for(mainIndex = 0; mainIndex <10;mainIndex++){
+    text += "<tr>"
+        for(firstIndex = 0; firstIndex < 10; firstIndex++){
+            for(secondIndex = 0; secondIndex < firstIndex ; secondIndex++){
+                text += "*";
+            }
+            text += "</br>";
         }
-        text += "</br>";
+    text += "</tr>";
     }
+    text += "</table>";
+
   document.getElementById("demo").innerHTML = text;
 }
