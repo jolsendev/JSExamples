@@ -14,24 +14,46 @@
     request.onload = proccessResults;
     request.open("get", requestString, true);
     request.send();
+    document.getElementById("demo").innerHTML = request.status;
 
   };
 
 function testFunction(){
-    var firstIndex, secondIndex, mainIndex;
-    var text = "";
-    text += "<table>";
-    for(mainIndex = 0; mainIndex <10;mainIndex++){
-    text += "<tr>"
-        for(firstIndex = 0; firstIndex < 10; firstIndex++){
-            for(secondIndex = 0; secondIndex < firstIndex ; secondIndex++){
-                text += "*";
-            }
-            text += "</br>";
-        }
-    text += "</tr>";
-    }
-    text += "</table>";
 
-  document.getElementById("demo").innerHTML = text;
+
+    //create array
+    var cars = ["Saab", "Volvo", "BMW"];
+    var carReviews = ["Shit", "Cool", "Whatevs"];
+    //loop thru array
+
+
+    var firstIndex, secondIndex;
+    var text = "";
+    var textP ="";
+
+    text += "<tr style=\"border: 1px solid black\">"
+    text += "<td>"+cars[0]+"</td>";
+    text += "<td>"+cars[1]+"</td>";
+    text += "<td>"+cars[2]+"</td>";
+    text += "</tr>"
+
+    for(var x = 0; x < 10; x++){
+        var ranNum = Math.floor(Math.random() * 3);
+        var ranNum2 = Math.floor(Math.random() * 3);
+        var ranNum3 = Math.floor(Math.random() * 3);
+        text += "<tr>";
+            text += "<td>"+carReviews[ranNum]+"</td>";
+            text += "<td>"+carReviews[ranNum2]+"</td>";
+            text += "<td>"+carReviews[ranNum3]+"</td>";
+        text += "</tr>";
+    }
+
+//        for(firstIndex = 0; firstIndex < 10; firstIndex++){
+//            for(secondIndex = 0; secondIndex < firstIndex ; secondIndex++){
+//                text += "*";
+//            }
+//            text += "</br>";
+//        }
+  document.getElementById("tableDemo").innerHTML = text;
+  document.getElementById("demo").innerHTML = textP;
 }
