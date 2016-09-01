@@ -34,15 +34,3 @@ function testMovieDb(){
 
 
 }
-
-function processJSON(arr){
-    var BASE = "http://image.tmdb.org/t/p/w185/";
-    var out ="";
-    var i;
-    out += "<p>";
-    for (i = 0; i < arr.length; i++){
-        out+= arr[i]+"</.br>";
-    }
-    out += "</p>"
-    document.getElementById("out").innerHTML = out;
-}
