@@ -15,12 +15,13 @@ function testMovieDb(){
 
         //process JSON
             var myArr = JSON.parse(xhr.responseText);
-            console.log(myArr["results"]);
+            //console.log(myArr);
+            //console.log(myArr["results"]);
             var results = myArr["results"];
             var BASE = "http://image.tmdb.org/t/p/w185/";
             var out ="";
             var i;
-
+            //<img src='pathtoposter'>title</img>
             for (i = 0; i <15;i++){
                 out += '<img src="';
                 out+= BASE+results[i]["backdrop_path"];
